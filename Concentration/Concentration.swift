@@ -58,6 +58,21 @@ struct Concentration
             cards += [card, card]
         }
         // TODO: Shuffle the cards
+        cards.shuffle()
+    }
+}
+
+// The Fisher-Yates / Knuth shuffle obtained from Ray Wenderlich at
+// https://github.com/raywenderlich/swift-algorithm-club/tree/master/Shuffle
+// Modified by John McDermott 12/5/2017
+extension Array {
+    mutating func shuffle() {
+        for index in stride(from: count - 1, through: 1, by: -1) {
+            let newIndex = Int(arc4random_uniform(UInt32(index + 1)))
+            if index != newIndex {
+                self.swapAt(index, newIndex)
+            }
+        }
     }
 }
 
