@@ -40,12 +40,12 @@ class VCLLoggingViewController: UIViewController
         return String(describing: type(of: self))
     }
 
-    private func logVCL(_ msg: String) {
-        if instanceCount == nil {
-            instanceCount = VCLLoggingViewController.bumpInstanceCount(for: vclLoggingName)
-        }
-        print("\(VCLLoggingViewController.logPrefix(for: vclLoggingName))(\(instanceCount!)) \(msg)")
-    }
+//    private func logVCL(_ msg: String) {
+//        if instanceCount == nil {
+//            instanceCount = VCLLoggingViewController.bumpInstanceCount(for: vclLoggingName)
+//        }
+//        print("\(VCLLoggingViewController.logPrefix(for: vclLoggingName))(\(instanceCount!)) \(msg)")
+//    }
 
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
@@ -106,13 +106,13 @@ class VCLLoggingViewController: UIViewController
 //        logVCL("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
 //    }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        logVCL("viewWillTransition(to: \(size), with: coordinator)")
-        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in self.logVCL("begin animate(alongsideTransition:completion:)")
-        }, completion: { context -> Void in self.logVCL("end animate(alongsideTransition:completion:)")
-        })
-    }
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//        logVCL("viewWillTransition(to: \(size), with: coordinator)")
+//        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in self.logVCL("begin animate(alongsideTransition:completion:)")
+//        }, completion: { context -> Void in self.logVCL("end animate(alongsideTransition:completion:)")
+//        })
+//    }
 
 
 
