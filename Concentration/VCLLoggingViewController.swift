@@ -47,64 +47,64 @@ class VCLLoggingViewController: UIViewController
         print("\(VCLLoggingViewController.logPrefix(for: vclLoggingName))(\(instanceCount!)) \(msg)")
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        logVCL("init(coder:) - created via InterfaceBuilder ")
-    }
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        logVCL("init(nibName:bundle:) - create in code")
-    }
-
-    deinit {
-        logVCL("left the heap")
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        logVCL("awakeFromNib()")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        logVCL("viewDidLoad()")
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        logVCL("viewWillAppear(animated = \(animated))")
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        logVCL("viewDidAppear(animated = \(animated))")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        logVCL("viewWillDisappear(animated = \(animated))")
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        logVCL("viewDidDisappear(animated = \(animated))")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        logVCL("didReceiveMemoryWarning()")
-    }
-
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        logVCL("viewWillLayoutSubviews() bounds.size = \(view.bounds.size)")
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        logVCL("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        logVCL("init(coder:) - created via InterfaceBuilder ")
+//    }
+//
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        logVCL("init(nibName:bundle:) - create in code")
+//    }
+//
+//    deinit {
+//        logVCL("left the heap")
+//    }
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        logVCL("awakeFromNib()")
+//    }
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        logVCL("viewDidLoad()")
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        logVCL("viewWillAppear(animated = \(animated))")
+//    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        logVCL("viewDidAppear(animated = \(animated))")
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        logVCL("viewWillDisappear(animated = \(animated))")
+//    }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        logVCL("viewDidDisappear(animated = \(animated))")
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        logVCL("didReceiveMemoryWarning()")
+//    }
+//
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        logVCL("viewWillLayoutSubviews() bounds.size = \(view.bounds.size)")
+//    }
+//
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        logVCL("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
+//    }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
