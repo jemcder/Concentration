@@ -44,7 +44,12 @@ class ConcentrationViewController: VCLLoggingViewController
     @IBOutlet private var cardButtons: [UIButton]!
 
     private var visibleCardButtons: [UIButton]! {
-        return cardButtons.filter { !$0.superview!.isHidden }
+        return cardButtons?.filter { !$0.superview!.isHidden }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViewFromModel()
     }
 
     @IBAction private func touchCard(_ sender: UIButton) {
